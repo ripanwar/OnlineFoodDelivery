@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
                       http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
-  version="2.0">	
-  <persistence-unit name="foodDelivery" transaction-type="RESOURCE_LOCAL">
-  <provider>org.hibernate.ejb.HibernatePersistence</provider>
-  
-	 <properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE" />
-			<property name="javax.persistence.jdbc.user" value="system" />
-			<property name="javax.persistence.jdbc.password" value="admin" />
-			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
-			<property name="hibernate.hbm2ddl.auto" value="create"/>
-		</properties> 
+	version="2.0">
+	<persistence-unit name="foodDelivery"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.cg.fds.entities.Address</class>
+		<class>com.cg.fds.entities.Bill</class>
+		<class>com.cg.fds.entities.Category</class>
+		<class>com.cg.fds.entities.FoodCart</class>
+		<class>com.cg.fds.entities.Item</class>
+		<class>com.cg.fds.entities.Login</class>
+		<class>com.cg.fds.entities.OrderDetails</class>
+		<class>com.cg.fds.entities.Restaurant</class>
+
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:oracle:thin:@localhost:1521:XE" />
+			<property name="javax.persistence.jdbc.user"
+				value="crud" />
+			<property name="javax.persistence.jdbc.password"
+				value="crud" />
+			<property name="javax.persistence.jdbc.driver"
+				value="oracle.jdbc.driver.OracleDriver" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.HSQLDialect" />
+			
+				
+		</properties>
 	</persistence-unit>
-	</persistence>
+</persistence>

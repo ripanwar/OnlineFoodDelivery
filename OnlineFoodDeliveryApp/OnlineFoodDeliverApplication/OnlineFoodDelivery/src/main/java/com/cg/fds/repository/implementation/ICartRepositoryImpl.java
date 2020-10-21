@@ -9,7 +9,7 @@ public class ICartRepositoryImpl implements ICartRepository{
 
 	public FoodCart addItemToCart(FoodCart cart, Item item) {
 		// TODO Auto-generated method stub
-		return null;
+		return cart;
 	}
 
 	public FoodCart increaseQuantity(FoodCart cart, Item item, int quantity) {

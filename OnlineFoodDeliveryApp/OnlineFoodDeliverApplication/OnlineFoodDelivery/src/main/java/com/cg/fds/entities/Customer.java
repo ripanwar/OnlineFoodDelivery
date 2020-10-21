@@ -2,8 +2,11 @@ package com.cg.fds.entities;
 
 import java.lang.reflect.GenericDeclaration;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Customer {
@@ -15,6 +18,7 @@ public class Customer {
 	private String gender;
 	private String age;
 	private String mobileNumber;
+	@OneToOne
 	private Address address;
 	private String email;
 	public Customer() {

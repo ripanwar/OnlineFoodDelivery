@@ -9,7 +9,7 @@ public class ICategoryServiceImpl implements ICategoryService{
 
 	public Category addCategory(Category cat) {
 		// TODO Auto-generated method stub
-		return null;
+		return cat;
 	}
 
 	public Category updateCategory(Category cat) {

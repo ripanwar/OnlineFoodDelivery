@@ -1,25 +1,26 @@
-package com.cg.fds.repository.implementation;
+package com.cg.fds.service.implementation;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.cg.fds.entities.Address;
 import com.cg.fds.entities.Customer;
+import com.cg.fds.repository.implementation.ICustomerRepositoryImpl;
 
+class ICustomerServiceImplTest {
 
-class ICustomerRepositoryImplTest {
-
-	Customer cus = null;
-	Address add = null;
-	ICustomerRepositoryImpl i;
+	Customer cus ;
+	Address add ;
+	ICustomerServiceImpl i;
 	List<Customer> customerList;
 	
-	@Before
+	@BeforeEach
 	public void setup() {
 		cus = new Customer();
 		cus.setCustomerId("1");
@@ -41,7 +42,7 @@ class ICustomerRepositoryImplTest {
 		customerList = new ArrayList<Customer>();
 		customerList.add(cus);
 		
-		i = new ICustomerRepositoryImpl();
+		i = new ICustomerServiceImpl();
 	}
 	
 	@Test
@@ -81,4 +82,5 @@ class ICustomerRepositoryImplTest {
 		assertEquals(customerList,i.viewAllCustomer("ABC Resturant"));
 		
 	}
+
 }

@@ -1,24 +1,25 @@
-package com.cg.fds.repository.implementation;
+package com.cg.fds.service.implementation;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.cg.fds.entities.Customer;
 import com.cg.fds.entities.FoodCart;
 import com.cg.fds.entities.Item;
-import com.cg.fds.service.implement.ICartServiceImpl;
+import com.cg.fds.repository.implementation.ICartRepositoryImpl;
 
-class ICartRepositoryImplTest {
-	
+class ICartServiceImplTest {
+
 	FoodCart cart;
-	ICartRepositoryImpl icr;
+	ICartServiceImpl icr;
 	Customer cust;
 	Item item;
 	
 	
-	@BeforeAll
+	@BeforeEach
 	public void setup()
 	{
 		cart.setCartId("123");
@@ -28,7 +29,7 @@ class ICartRepositoryImplTest {
 		cust.setAge("21");
 		item = new Item();
 		item.setQuantity(4);
-		icr = new ICartRepositoryImpl();
+		icr = new ICartServiceImpl();
 	}
 	
 

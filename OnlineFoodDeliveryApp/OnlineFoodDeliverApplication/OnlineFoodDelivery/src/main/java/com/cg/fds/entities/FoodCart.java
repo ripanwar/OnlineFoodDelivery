@@ -2,13 +2,18 @@ package com.cg.fds.entities;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 @Entity
 public class FoodCart {
 	@Id
 	private String cartId;
+	@OneToOne
 	private Customer customer;
+	@OneToMany
 	private List<Item> itemList;
 	public FoodCart() {
 		super();

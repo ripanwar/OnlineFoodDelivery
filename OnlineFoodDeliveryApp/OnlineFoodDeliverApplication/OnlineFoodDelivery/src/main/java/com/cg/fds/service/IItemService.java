@@ -8,7 +8,7 @@ import com.cg.fds.entities.Restaurant;
 
 public interface IItemService {
 
-	public Item addItem(Item item);
+	public Item addItem(Item item) throws Exception ;
 	public Item viewItem(String id);
 	public Item updateItem(Item item);
 	public Item removeItem(String id);

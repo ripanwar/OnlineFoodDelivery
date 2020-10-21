@@ -3,13 +3,16 @@ package com.cg.fds.entities;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 @Entity
 public class OrderDetails {
 @Id
 	private int orderId;
 	private LocalDateTime orderDate;
+	@OneToOne
 	private FoodCart cart;
 	private String orderStatus;
 	public OrderDetails() {

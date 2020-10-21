@@ -10,7 +10,7 @@ public class IBillServiceImpl implements IBillService{
 
 	public Bill addBill(Bill bill) {
 		// TODO Auto-generated method stub
-		return null;
+		return bill;
 	}
 
 	public Bill updateBill(Bill bill) {

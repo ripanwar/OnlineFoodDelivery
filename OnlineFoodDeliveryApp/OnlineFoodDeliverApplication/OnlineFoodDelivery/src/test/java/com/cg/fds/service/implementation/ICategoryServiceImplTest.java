@@ -1,32 +1,31 @@
-package com.cg.fds.repository.implementation;
+package com.cg.fds.service.implementation;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.cg.fds.entities.Category;
+import com.cg.fds.repository.implementation.ICategoryRepositoryImpl;
 
+class ICategoryServiceImplTest {
 
-class ICategoryRepositoryImplTest {
-
-	Category c = null;
-	ICategoryRepositoryImpl i;
+	Category c ;
+	ICategoryServiceImpl i;
 	List<Category> categoryList;
 	
-	@Before
+	@BeforeEach
 	public void setup() {
 		c = new Category();
 		c.setCatId("1000");
 		c.setCategoryName("Deserts");
-		
 		categoryList = new ArrayList<Category>();
 		categoryList.add(c);
-		
-		i = new ICategoryRepositoryImpl();
+		i = new ICategoryServiceImpl();
 	}
 	
 	@Test
@@ -62,6 +61,5 @@ class ICategoryRepositoryImplTest {
 		assertEquals(categoryList,i.viewAllCategory());
 		
 	}
-	
 
 }

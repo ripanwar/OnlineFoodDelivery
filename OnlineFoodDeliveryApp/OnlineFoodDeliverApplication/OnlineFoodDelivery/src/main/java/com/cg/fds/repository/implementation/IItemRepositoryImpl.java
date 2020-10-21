@@ -7,6 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Component;
 
 import com.cg.fds.entities.Category;
 import com.cg.fds.entities.Item;
@@ -17,22 +19,21 @@ import com.cg.fds.utils.DatabaseConnection;
 import oracle.jdbc.driver.DatabaseError;
 
 public class IItemRepositoryImpl implements IItemRepository {
-	@Autowired
-	DatabaseConnection dbConnect;
 
-	public Item addItem(Item item) {
+	private EntityManager em;
+	
+	DatabaseConnection dbConnect=new DatabaseConnection();
+
+	
+
+	public Item addItem(Item item) throws Exception {
 		// TODO Auto-generated method stub
-		try {
-			EntityManager em=dbConnect.createConnection();
-			em.getTransaction().begin();
-			em.persist(item);
-			em.getTransaction().commit();
-			em.close();
-			return item;
-		} catch (Exception e) {
-			// TODO: handle exception
-			throw new NullPointerException();
-		}
+		em=dbConnect.createConnection();
+		em.getTransaction().begin();
+		em.persist(item);
+		
+		return item;
+
 	}
 
 	public Item viewItem(String id) {

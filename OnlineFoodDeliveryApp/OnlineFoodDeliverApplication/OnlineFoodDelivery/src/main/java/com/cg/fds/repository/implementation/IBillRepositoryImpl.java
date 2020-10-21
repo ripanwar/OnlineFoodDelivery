@@ -10,7 +10,7 @@ public class IBillRepositoryImpl implements IBillRepository{
 
 	public Bill addBill(Bill bill) {
 		// TODO Auto-generated method stub
-		return null;
+		return bill;
 	}
 
 	public Bill updateBill(Bill bill) {

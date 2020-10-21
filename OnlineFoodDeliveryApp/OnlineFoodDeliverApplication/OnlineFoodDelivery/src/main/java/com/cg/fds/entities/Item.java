@@ -2,22 +2,27 @@ package com.cg.fds.entities;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 public class Item {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	private String itemId;
 	private String itemName;
+	@OneToOne
 	private Category category;
 	private int quantity;
 	private double cost;
+	@OneToMany
 	private List<Restaurant> restaurants;
 	public Item() {
 		super();
@@ -75,7 +80,7 @@ public class Item {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Item [Item ID=" + itemId + ", Item Name=" + itemName + ", Category=" + category + ", Quantity="+quantity+", Cost="+cost+"Restaurant"+restaurants+"]";
+		return "Item [Item ID=" + itemId + ", Item Name=" + itemName + ", Category=" + category + ", Quantity="+quantity+", Cost="+cost+", Restaurant="+restaurants+"]";
 
 	}
 }

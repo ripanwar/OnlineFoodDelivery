@@ -2,7 +2,11 @@ package com.cg.fds.entities;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Restaurant {
+@Id
 private String restaurantId;
 private String restaurantName;
 private Address address;
@@ -24,6 +28,7 @@ public Restaurant(String restaurantId, String restaurantName, Address address, L
 	this.contactNumber = contactNumber;
 }
 public String getRestaurantId() {
+	
 	return restaurantId;
 }
 public void setRestaurantId(String restaurantId) {

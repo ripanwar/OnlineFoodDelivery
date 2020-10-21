@@ -2,8 +2,13 @@ package com.cg.fds.entities;
 
 import java.lang.reflect.GenericDeclaration;
 
-public class Customer {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class Customer {
+	
+	@Id
 	private String customerId;
 	private String firstName;
 	private String lastName;

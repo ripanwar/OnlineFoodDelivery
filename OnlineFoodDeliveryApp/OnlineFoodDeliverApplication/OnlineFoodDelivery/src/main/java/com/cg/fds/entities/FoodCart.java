@@ -2,8 +2,11 @@ package com.cg.fds.entities;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class FoodCart {
-
+	@Id
 	private String cartId;
 	private Customer customer;
 	private List<Item> itemList;

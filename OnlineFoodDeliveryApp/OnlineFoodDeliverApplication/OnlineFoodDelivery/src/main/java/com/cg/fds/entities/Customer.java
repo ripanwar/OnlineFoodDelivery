@@ -1,9 +1,16 @@
 package com.cg.fds.entities;
 
 import java.lang.reflect.GenericDeclaration;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+
+@Entity
+@Table(name="CUSTOMER")
 public class Customer {
 
+	@Id
 	private String customerId;
 	private String firstName;
 	private String lastName;

@@ -1,10 +1,10 @@
-package com.cg.fds.service.implement;
+package com.cg.fds.service.implementation;
 
 import java.time.LocalDate;
 import java.util.List;
 
 import com.cg.fds.entities.Bill;
-import com.cg.fds.service.IBillService;
+import com.cg.fds.service.IBillService; 
 
 public class IBillServiceImpl implements IBillService{
 

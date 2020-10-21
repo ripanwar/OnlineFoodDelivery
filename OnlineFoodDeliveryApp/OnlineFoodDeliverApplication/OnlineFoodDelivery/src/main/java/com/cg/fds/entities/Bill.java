@@ -2,7 +2,11 @@ package com.cg.fds.entities;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Bill {
+	@Id
 private int billId;
 private OrderDetails order;
 private int totalItem;

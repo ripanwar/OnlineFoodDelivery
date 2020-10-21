@@ -1,7 +1,11 @@
 package com.cg.fds.entities;
 
-public class Login {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class Login {
+	@Id
 	private String userid;
 	private String userName;
 	private String password;
